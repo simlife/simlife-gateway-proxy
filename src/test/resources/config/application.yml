@@ -3,8 +3,8 @@
 #
 # This configuration is used for unit/integration tests.
 #
-# More information on profiles: http://www.simlife.tech/profiles/
-# More information on configuration properties: http://www.simlife.tech/common-application-properties/
+# More information on profiles: http://www.simlife.io/profiles/
+# More information on configuration properties: http://www.simlife.io/common-application-properties/
 # ===================================================================
 
 # ===================================================================
@@ -52,7 +52,7 @@ management:
 # ===================================================================
 # Simlife specific properties
 #
-# Full reference is available at: http://www.simlife.tech/common-application-properties/
+# Full reference is available at: http://www.simlife.io/common-application-properties/
 # ===================================================================
 
 simlife:
@@ -75,7 +75,7 @@ simlife:
 # to have type-safe configuration, like in the SimlifeProperties above
 #
 # More documentation is available at:
-# http://www.simlife.tech/common-application-properties/
+# http://www.simlife.io/common-application-properties/
 # ===================================================================
 
 # application:

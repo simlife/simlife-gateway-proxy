@@ -58,7 +58,7 @@ server:
 # ===================================================================
 # Simlife specific properties
 #
-# Full reference is available at: http://www.simlife.tech/common-application-properties/
+# Full reference is available at: http://www.simlife.io/common-application-properties/
 # ===================================================================
 
 simlife:
@@ -104,7 +104,7 @@ simlife:
 # to have type-safe configuration, like in the SimlifeProperties above
 #
 # More documentation is available at:
-# http://www.simlife.tech/common-application-properties/
+# http://www.simlife.io/common-application-properties/
 # ===================================================================
 
 # application:

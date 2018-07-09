@@ -45,7 +45,7 @@ public class SimlifeRegistryApp {
      * <p>
      * Spring profiles can be configured with a program arguments --spring.profiles.active=your-active-profile
      * <p>
-     * You can find more information on how profiles work with Simlife on <a href="http://www.simlife.tech/profiles/">http://www.simlife.tech/profiles/</a>.
+     * You can find more information on how profiles work with Simlife on <a href="http://www.simlife.io/profiles/">http://www.simlife.io/profiles/</a>.
      */
     @PostConstruct
     public void initApplication() {
@@ -97,13 +97,13 @@ public class SimlifeRegistryApp {
         if (secretKey == null ) {
             log.error("\n----------------------------------------------------------\n" +
                 "Your JWT secret key is not set up, you will not be able to log into the Simlife.\n"+
-                "Please read the documentation at http://www.simlife.tech/simlife-registry/\n" +
+                "Please read the documentation at http://www.simlife.io/simlife-registry/\n" +
                 "----------------------------------------------------------");
         } else if ("this-secret-should-not-be-used-read-the-comment".equals(secretKey)) {
             log.error("\n----------------------------------------------------------\n" +
                 "Your JWT secret key is not configured using Spring Cloud Config, you will not be able to \n"+
                 "use the Simlife Registry dashboards to monitor external applications. \n" +
-                "Please read the documentation at http://www.simlife.tech/simlife-registry/\n" +
+                "Please read the documentation at http://www.simlife.io/simlife-registry/\n" +
                 "----------------------------------------------------------");
         }
     }

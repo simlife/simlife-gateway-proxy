@@ -1,7 +1,7 @@
 {
   "name": "Simlife Registry",
   "description": "This is the Simlife registry service, based on Spring Cloud Netflix, Eureka and Spring Cloud Config.",
-  "logo": "http://www.simlife.tech/images/logo/logo-simlife-drink-coffee.png",
+  "logo": "http://www.simlife.io/images/logo/logo-simlife-drink-coffee.png",
   "env": {
     "SIMLIFE_PASSWORD": {
       "description": "Admin password for the registry (used to login after clicking 'View App'). Must be at least 5 characters.",
