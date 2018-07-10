@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { JhiAlertService } from 'ng-simlife';
+import { SimAlertService } from 'ng-simlife';
 
 @Component({
     selector: 'sim-alert',
@@ -10,10 +10,10 @@ import { JhiAlertService } from 'ng-simlife';
             </div>
         </div>`
 })
-export class JhiAlertComponent implements OnInit, OnDestroy {
+export class SimAlertComponent implements OnInit, OnDestroy {
     alerts: any[];
 
-    constructor(private alertService: JhiAlertService) {}
+    constructor(private alertService: SimAlertService) {}
 
     ngOnInit() {
         this.alerts = this.alertService.get();

@@ -4,7 +4,7 @@ import { NgModule, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Ng2Webstorage, LocalStorageService, SessionStorageService } from 'ngx-webstorage';
-import { JhiEventManager } from 'ng-simlife';
+import { SimEventManager } from 'ng-simlife';
 
 import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
@@ -18,7 +18,7 @@ import { SimlifeRegistryModule } from './registry/registry.module';
 
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
 
-import { JhiMainComponent, NavbarComponent, FooterComponent, ProfileService, PageRibbonComponent, ErrorComponent } from './layouts';
+import { SimMainComponent, NavbarComponent, FooterComponent, ProfileService, PageRibbonComponent, ErrorComponent } from './layouts';
 
 @NgModule({
     imports: [
@@ -30,7 +30,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, ProfileService, Pag
         SimlifeRegistryAdminModule,
         SimlifeRegistryModule
     ],
-    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
+    declarations: [SimMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
     providers: [
         ProfileService,
         PaginationConfig,
@@ -51,7 +51,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, ProfileService, Pag
             provide: HTTP_INTERCEPTORS,
             useClass: ErrorHandlerInterceptor,
             multi: true,
-            deps: [JhiEventManager]
+            deps: [SimEventManager]
         },
         {
             provide: HTTP_INTERCEPTORS,
@@ -60,6 +60,6 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, ProfileService, Pag
             deps: [Injector]
         }
     ],
-    bootstrap: [JhiMainComponent]
+    bootstrap: [SimMainComponent]
 })
 export class SimlifeRegistryAppModule {}

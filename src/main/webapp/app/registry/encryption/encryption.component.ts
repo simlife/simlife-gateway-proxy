@@ -1,17 +1,17 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { JhiEncryptionService } from './encryption.service';
+import { SimEncryptionService } from './encryption.service';
 
 @Component({
     selector: 'sim-encryption',
     templateUrl: './encryption.component.html'
 })
-export class JhiEncryptionComponent implements OnInit, OnDestroy {
+export class SimEncryptionComponent implements OnInit, OnDestroy {
     showMore: boolean;
     textToEncrypt: string;
     encryptedText: string;
     result: string;
 
-    constructor(private encryptionService: JhiEncryptionService) {
+    constructor(private encryptionService: SimEncryptionService) {
         this.showMore = true;
         this.textToEncrypt = '';
         this.encryptedText = '';

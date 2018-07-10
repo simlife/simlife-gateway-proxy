@@ -1,12 +1,12 @@
 import { SpyObject } from './spyobject';
-import { JhiEventManager } from 'ng-simlife';
+import { SimEventManager } from 'ng-simlife';
 import Spy = jasmine.Spy;
 
 export class MockEventManager extends SpyObject {
     broadcastSpy: Spy;
 
     constructor() {
-        super(JhiEventManager);
+        super(SimEventManager);
         this.broadcastSpy = this.spy('broadcast').andReturn(this);
     }
 }

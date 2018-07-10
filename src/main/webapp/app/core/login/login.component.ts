@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, Renderer, ElementRef } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
-import { JhiEventManager } from 'ng-simlife';
+import { SimEventManager } from 'ng-simlife';
 
 import { LoginService } from './login.service';
 import { StateStorageService } from 'app/core/auth/state-storage.service';
@@ -10,7 +10,7 @@ import { StateStorageService } from 'app/core/auth/state-storage.service';
     selector: 'sim-login-modal',
     templateUrl: './login.component.html'
 })
-export class JhiLoginModalComponent implements OnInit, AfterViewInit {
+export class SimLoginModalComponent implements OnInit, AfterViewInit {
     authenticationError: boolean;
     password: string;
     rememberMe: boolean;
@@ -18,7 +18,7 @@ export class JhiLoginModalComponent implements OnInit, AfterViewInit {
     credentials: any;
 
     constructor(
-        private eventManager: JhiEventManager,
+        private eventManager: SimEventManager,
         private loginService: LoginService,
         private stateStorageService: StateStorageService,
         private elementRef: ElementRef,

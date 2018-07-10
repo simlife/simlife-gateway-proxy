@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class JhiApplicationsService {
+export class SimApplicationsService {
     constructor(private http: HttpClient) {}
 
     findAll(): Observable<any> {

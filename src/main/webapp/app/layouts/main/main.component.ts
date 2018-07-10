@@ -8,11 +8,11 @@ import { StateStorageService } from 'app/shared';
     selector: 'sim-main',
     templateUrl: './main.component.html'
 })
-export class JhiMainComponent implements OnInit {
+export class SimMainComponent implements OnInit {
     constructor(private titleService: Title, private router: Router, private $storageService: StateStorageService) {}
 
     private getPageTitle(routeSnapshot: ActivatedRouteSnapshot) {
-        let title: string = routeSnapshot.data && routeSnapshot.data['pageTitle'] ? routeSnapshot.data['pageTitle'] : 'jHipsterRegistryApp';
+        let title: string = routeSnapshot.data && routeSnapshot.data['pageTitle'] ? routeSnapshot.data['pageTitle'] : 'jSimlifeRegistryApp';
         if (routeSnapshot.firstChild) {
             title = this.getPageTitle(routeSnapshot.firstChild) || title;
         }

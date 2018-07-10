@@ -19,7 +19,7 @@
     "core-js": "2.5.3",
     "font-awesome": "4.7.0",
     "jquery": "3.3.1",
-    "ng-simlife": "0.4.5",
+    "ng-simlife": "0.4.15",
     "ngx-cookie": "2.0.1",
     "ngx-infinite-scroll": "0.5.1",
     "ngx-webstorage": "2.0.1",
@@ -50,7 +50,7 @@
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "file-loader": "1.1.11",
     "fork-ts-checker-webpack-plugin": "0.4.2",
-    "generator-simlife": "4.14.0",
+    "simlife-bot": "4.14.6",
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.0.6",
     "husky": "0.14.3",
@@ -106,11 +106,14 @@
     "node": ">=8.9.0"
   },
   "lint-staged": {
-    "*.ts": ["prettier --write", "git add"]
+    "*.ts": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "scripts": {
     "precommit": "lint-staged",
-    "prettier:format":"yarn prettier --write **/*.ts",
+    "prettier:format": "yarn prettier --write **/*.ts",
     "lint": "tslint --project tsconfig.json -e 'node_modules/**'",
     "lint:fix": "yarn run lint -- --fix",
     "ngc": "ngc -p tsconfig-aot.json",

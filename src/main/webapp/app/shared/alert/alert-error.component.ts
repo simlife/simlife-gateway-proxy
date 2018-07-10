@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { JhiEventManager, JhiAlertService } from 'ng-simlife';
+import { SimEventManager, SimAlertService } from 'ng-simlife';
 import { Subscription } from 'rxjs/Rx';
 
 @Component({
@@ -13,14 +13,14 @@ import { Subscription } from 'rxjs/Rx';
             </div>
         </div>`
 })
-export class JhiAlertErrorComponent implements OnDestroy {
+export class SimAlertErrorComponent implements OnDestroy {
     alerts: any[];
     cleanHttpErrorListener: Subscription;
 
-    constructor(private alertService: JhiAlertService, private eventManager: JhiEventManager) {
+    constructor(private alertService: SimAlertService, private eventManager: SimEventManager) {
         this.alerts = [];
 
-        this.cleanHttpErrorListener = eventManager.subscribe('jHipsterRegistryApp.httpError', (response) => {
+        this.cleanHttpErrorListener = eventManager.subscribe('jSimlifeRegistryApp.httpError', (response) => {
             let i;
             const httpErrorResponse = response.content;
             switch (httpErrorResponse.status) {

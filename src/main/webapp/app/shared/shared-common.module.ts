@@ -5,15 +5,15 @@ import { registerLocaleData } from '@angular/common';
 import locale from '@angular/common/locales/en';
 import {
     SimlifeRegistrySharedLibsModule,
-    JhiAlertComponent,
-    JhiAlertErrorComponent,
-    JhiRouteSelectorComponent,
-    JhiRefreshSelectorComponent
+    SimAlertComponent,
+    SimAlertErrorComponent,
+    SimRouteSelectorComponent,
+    SimRefreshSelectorComponent
 } from './';
 
 @NgModule({
     imports: [SimlifeRegistrySharedLibsModule],
-    declarations: [JhiAlertComponent, JhiAlertErrorComponent, JhiRouteSelectorComponent, JhiRefreshSelectorComponent, GroupByPipe],
+    declarations: [SimAlertComponent, SimAlertErrorComponent, SimRouteSelectorComponent, SimRefreshSelectorComponent, GroupByPipe],
     providers: [
         Title,
         {
@@ -23,10 +23,10 @@ import {
     ],
     exports: [
         SimlifeRegistrySharedLibsModule,
-        JhiAlertComponent,
-        JhiAlertErrorComponent,
-        JhiRouteSelectorComponent,
-        JhiRefreshSelectorComponent,
+        SimAlertComponent,
+        SimAlertErrorComponent,
+        SimRouteSelectorComponent,
+        SimRefreshSelectorComponent,
         GroupByPipe
     ]
 })

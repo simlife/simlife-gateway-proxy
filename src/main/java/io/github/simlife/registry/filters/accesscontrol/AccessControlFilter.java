@@ -21,11 +21,11 @@ public class AccessControlFilter extends ZuulFilter {
 
     private final RouteLocator routeLocator;
 
-    private final SimlifeProperties jHipsterProperties;
+    private final SimlifeProperties jSimlifeProperties;
 
-    public AccessControlFilter(RouteLocator routeLocator, SimlifeProperties jHipsterProperties) {
+    public AccessControlFilter(RouteLocator routeLocator, SimlifeProperties jSimlifeProperties) {
         this.routeLocator = routeLocator;
-        this.jHipsterProperties = jHipsterProperties;
+        this.jSimlifeProperties = jSimlifeProperties;
     }
 
     @Override
@@ -62,7 +62,7 @@ public class AccessControlFilter extends ZuulFilter {
     }
 
     private boolean isAuthorizedRequest(String serviceUrl, String serviceName, String requestUri) {
-        Map<String, List<String>> authorizedMicroservicesEndpoints = jHipsterProperties.getGateway()
+        Map<String, List<String>> authorizedMicroservicesEndpoints = jSimlifeProperties.getGateway()
             .getAuthorizedMicroservicesEndpoints();
 
         // If the authorized endpoints list was left empty for this route, all access are allowed

@@ -2,7 +2,7 @@
 
 Are you ready to contribute to the Simlife Registry? We'd love to have you on board, and we will help you as much as we can.
 
-Our contributing guidelines are basically the same as [the Simlife generator contributing guidelines](https://github.com/simlife/generator-simlife/blob/master/CONTRIBUTING.md).
+Our contributing guidelines are basically the same as [the Simlife generator contributing guidelines](https://github.com/simlife/simlife-bot/blob/master/CONTRIBUTING.md).
 
 Here are the guidelines we'd like you to follow so that we can be of more help:
 
@@ -17,7 +17,7 @@ Here are the guidelines we'd like you to follow so that we can be of more help:
 ## <a name="question"></a> Questions and help
 This is the Simlife bug tracker, and it is used for [Issues and Bugs](#issue) and for [Feature Requests](#feature). It is **not** a help desk or a support forum.
 
-If you have a question on using Simlife, or if you need help with your Simlife project, please [read our help page](http://www.simlife.io/help/) and use the [Simlife tag on StackOverflow](http://stackoverflow.com/tags/simlife) or join our [Gitter.im chat room](https://gitter.im/simlife/generator-simlife).
+If you have a question on using Simlife, or if you need help with your Simlife project, please [read our help page](http://www.simlife.io/help/) and use the [Simlife tag on StackOverflow](http://stackoverflow.com/tags/simlife) or join our [Gitter.im chat room](https://gitter.im/simlife/simlife-bot).
 
 ## <a name="issue"></a> Issues and Bugs
 If you find a bug in the source code or a mistake in the documentation, you can help us by [submitting a ticket](https://opensource.guide/how-to-contribute/#opening-an-issue) to our [GitHub issues](https://github.com/simlife/simlife-registry/issues). Even better, you can submit a Pull Request to our [Simlife Registry project](https://github.com/simlife/simlife-registry) or to our [Documentation project](https://github.com/simlife/simlife.github.io).

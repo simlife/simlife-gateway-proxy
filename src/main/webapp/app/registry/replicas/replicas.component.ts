@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { JhiReplicasService } from './replicas.service';
-import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
+import { SimReplicasService } from './replicas.service';
+import { SimRefreshService } from 'app/shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
@@ -8,13 +8,13 @@ import { Subscription } from 'rxjs/Subscription';
     templateUrl: './replicas.component.html',
     styleUrls: ['replicas.component.scss']
 })
-export class JhiReplicasComponent implements OnInit, OnDestroy {
+export class SimReplicasComponent implements OnInit, OnDestroy {
     showMore: boolean;
     replicas: any;
 
     refreshReloadSubscription: Subscription;
 
-    constructor(private replicasService: JhiReplicasService, private refreshService: JhiRefreshService) {
+    constructor(private replicasService: SimReplicasService, private refreshService: SimRefreshService) {
         this.showMore = true;
     }
 

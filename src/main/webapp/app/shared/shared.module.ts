@@ -16,17 +16,17 @@ import {
     LoginOAuth2Service,
     Principal,
     HasAnyAuthorityDirective,
-    JhiLoginModalComponent,
-    JhiRoutesService,
-    JhiRefreshService
+    SimLoginModalComponent,
+    SimRoutesService,
+    SimRefreshService
 } from './';
 
 @NgModule({
     imports: [SimlifeRegistrySharedLibsModule, SimlifeRegistrySharedCommonModule],
-    declarations: [JhiLoginModalComponent, HasAnyAuthorityDirective],
+    declarations: [SimLoginModalComponent, HasAnyAuthorityDirective],
     providers: [
-        JhiRoutesService,
-        JhiRefreshService,
+        SimRoutesService,
+        SimRefreshService,
         AuthServerProvider,
         AuthSessionServerProvider,
         CookieService,
@@ -41,8 +41,8 @@ import {
         UserService,
         DatePipe
     ],
-    entryComponents: [JhiLoginModalComponent],
-    exports: [SimlifeRegistrySharedCommonModule, JhiLoginModalComponent, HasAnyAuthorityDirective, DatePipe],
+    entryComponents: [SimLoginModalComponent],
+    exports: [SimlifeRegistrySharedCommonModule, SimLoginModalComponent, HasAnyAuthorityDirective, DatePipe],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SimlifeRegistrySharedModule {}

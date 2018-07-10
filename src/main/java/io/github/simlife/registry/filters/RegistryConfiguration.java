@@ -23,8 +23,8 @@ public class RegistryConfiguration {
     public static class AccessControlFilterConfiguration {
 
         @Bean
-        public AccessControlFilter accessControlFilter(RouteLocator routeLocator, SimlifeProperties jHipsterProperties){
-            return new AccessControlFilter(routeLocator, jHipsterProperties);
+        public AccessControlFilter accessControlFilter(RouteLocator routeLocator, SimlifeProperties jSimlifeProperties){
+            return new AccessControlFilter(routeLocator, jSimlifeProperties);
         }
     }
 

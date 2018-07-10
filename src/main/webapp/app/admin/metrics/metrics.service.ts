@@ -6,7 +6,7 @@ import { Route } from 'app/shared';
 import { SERVER_API_URL } from 'app/app.constants';
 
 @Injectable()
-export class JhiMetricsService {
+export class SimMetricsService {
     constructor(private http: HttpClient) {}
 
     // get the Registry's metrics

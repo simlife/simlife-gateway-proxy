@@ -22,7 +22,7 @@ public class ProfileInfoResource {
 
     private final Environment env;
 
-    private final SimlifeProperties jHipsterProperties;
+    private final SimlifeProperties jSimlifeProperties;
 
     @Value("${spring.cloud.config.server.native.search-locations:}")
     private String nativeSearchLocation;
@@ -33,9 +33,9 @@ public class ProfileInfoResource {
     @Value("${spring.cloud.config.server.git.search-paths:}")
     private String gitSearchLocation;
 
-    public ProfileInfoResource(Environment env, SimlifeProperties jHipsterProperties) {
+    public ProfileInfoResource(Environment env, SimlifeProperties jSimlifeProperties) {
         this.env = env;
-        this.jHipsterProperties = jHipsterProperties;
+        this.jSimlifeProperties = jSimlifeProperties;
     }
 
     @GetMapping("/profile-info")

@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
     selector: 'sim-docs',
     templateUrl: './docs.component.html'
 })
-export class JhiDocsComponent {
+export class SimDocsComponent {
     constructor() {}
 }

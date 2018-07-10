@@ -1,32 +1,32 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 import { SimlifeRegistryTestModule } from '../../../test.module';
-import { JhiHealthCheckComponent } from 'app/admin/health/health.component';
-import { JhiHealthService } from 'app/admin/health/health.service';
-import { JhiRoutesService } from 'app/shared/routes/routes.service';
+import { SimHealthCheckComponent } from 'app/admin/health/health.component';
+import { SimHealthService } from 'app/admin/health/health.service';
+import { SimRoutesService } from 'app/shared/routes/routes.service';
 
 describe('Component Tests', () => {
-    describe('JhiHealthCheckComponent', () => {
-        let comp: JhiHealthCheckComponent;
-        let fixture: ComponentFixture<JhiHealthCheckComponent>;
-        let service: JhiHealthService;
+    describe('SimHealthCheckComponent', () => {
+        let comp: SimHealthCheckComponent;
+        let fixture: ComponentFixture<SimHealthCheckComponent>;
+        let service: SimHealthService;
 
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
                     imports: [SimlifeRegistryTestModule],
-                    declarations: [JhiHealthCheckComponent],
-                    providers: [JhiHealthService, JhiRoutesService]
+                    declarations: [SimHealthCheckComponent],
+                    providers: [SimHealthService, SimRoutesService]
                 })
-                    .overrideTemplate(JhiHealthCheckComponent, '')
+                    .overrideTemplate(SimHealthCheckComponent, '')
                     .compileComponents();
             })
         );
 
         beforeEach(() => {
-            fixture = TestBed.createComponent(JhiHealthCheckComponent);
+            fixture = TestBed.createComponent(SimHealthCheckComponent);
             comp = fixture.componentInstance;
-            service = fixture.debugElement.injector.get(JhiHealthService);
+            service = fixture.debugElement.injector.get(SimHealthService);
             fixture.detectChanges();
         });
 

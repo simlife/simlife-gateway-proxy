@@ -1,10 +1,10 @@
 import { Route } from '@angular/router';
 
-import { JhiConfigurationComponent } from './configuration.component';
+import { SimConfigurationComponent } from './configuration.component';
 
 export const configurationRoute: Route = {
     path: 'sim-configuration',
-    component: JhiConfigurationComponent,
+    component: SimConfigurationComponent,
     data: {
         pageTitle: 'Cloud configuration'
     }

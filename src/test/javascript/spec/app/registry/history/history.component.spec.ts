@@ -2,27 +2,27 @@ import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angu
 import { Observable } from 'rxjs';
 
 import { SimlifeRegistryTestModule } from '../../../test.module';
-import { JhiHistoryComponent, JhiHistoryService } from '../../../../../../main/webapp/app/registry';
+import { SimHistoryComponent, SimHistoryService } from '../../../../../../main/webapp/app/registry';
 
 describe('Component Tests', () => {
     describe('HistoryComponent', () => {
-        let comp: JhiHistoryComponent;
-        let fixture: ComponentFixture<JhiHistoryComponent>;
+        let comp: SimHistoryComponent;
+        let fixture: ComponentFixture<SimHistoryComponent>;
 
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
                     imports: [SimlifeRegistryTestModule],
-                    declarations: [JhiHistoryComponent],
-                    providers: [JhiHistoryService]
+                    declarations: [SimHistoryComponent],
+                    providers: [SimHistoryService]
                 })
-                    .overrideTemplate(JhiHistoryComponent, '')
+                    .overrideTemplate(SimHistoryComponent, '')
                     .compileComponents();
             })
         );
 
         beforeEach(() => {
-            fixture = TestBed.createComponent(JhiHistoryComponent);
+            fixture = TestBed.createComponent(SimHistoryComponent);
             comp = fixture.componentInstance;
             fixture.detectChanges();
         });
@@ -30,7 +30,7 @@ describe('Component Tests', () => {
         it(
             'refresh data',
             fakeAsync(
-                inject([JhiHistoryService], (service: JhiHistoryService) => {
+                inject([SimHistoryService], (service: SimHistoryService) => {
                     const response = {
                         canceled: {
                             '11052017': 'instance1'
@@ -53,7 +53,7 @@ describe('Component Tests', () => {
         it(
             'activate registered tab',
             fakeAsync(
-                inject([JhiHistoryService], (service: JhiHistoryService) => {
+                inject([SimHistoryService], (service: SimHistoryService) => {
                     const response = {
                         canceled: {
                             '11052017': 'instance1'

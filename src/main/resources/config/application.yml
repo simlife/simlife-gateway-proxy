@@ -86,7 +86,7 @@ eureka:
             defaultZone: http://admin:${spring.security.user.password:admin}@localhost:${server.port}/eureka/
     server:
         # see discussion about enable-self-preservation:
-        # https://github.com/simlife/generator-simlife/issues/3654
+        # https://github.com/simlife/simlife-bot/issues/3654
         enable-self-preservation: false
     dashboard:
         path: /registry

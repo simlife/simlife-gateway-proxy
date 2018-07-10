@@ -1,11 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager } from 'ng-simlife';
+import { SimEventManager } from 'ng-simlife';
 
 import { Account, LoginModalService, Principal } from 'app/shared';
-import { JhiHealthService } from 'app/admin';
-import { JhiApplicationsService } from 'app/registry';
-import { JhiRefreshService } from '../shared/refresh/refresh.service';
+import { SimHealthService } from 'app/admin';
+import { SimApplicationsService } from 'app/registry';
+import { SimRefreshService } from '../shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
 import { VERSION } from 'app/app.constants';
@@ -33,12 +33,12 @@ export class HomeComponent implements OnInit, OnDestroy {
         private principal: Principal,
         private loginModalService: LoginModalService,
         private loginOAuth2Service: LoginOAuth2Service,
-        private eventManager: JhiEventManager,
+        private eventManager: SimEventManager,
         private eurekaStatusService: EurekaStatusService,
-        private applicationsService: JhiApplicationsService,
-        private healthService: JhiHealthService,
+        private applicationsService: SimApplicationsService,
+        private healthService: SimHealthService,
         private profileService: ProfileService,
-        private refreshService: JhiRefreshService
+        private refreshService: SimRefreshService
     ) {
         this.version = VERSION ? 'v' + VERSION : '';
         this.appInstances = [];

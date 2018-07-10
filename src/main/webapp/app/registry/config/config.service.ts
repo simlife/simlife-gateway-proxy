@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class JhiConfigService {
+export class SimConfigService {
     constructor(private http: HttpClient) {}
 
     getConfigAsYaml(application: string, profile: string, label: string): Observable<any> {

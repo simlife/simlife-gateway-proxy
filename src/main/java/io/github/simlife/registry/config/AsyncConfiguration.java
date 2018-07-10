@@ -21,10 +21,10 @@ public class AsyncConfiguration implements AsyncConfigurer {
 
     private final Logger log = LoggerFactory.getLogger(AsyncConfiguration.class);
 
-    private final SimlifeProperties jHipsterProperties;
+    private final SimlifeProperties jSimlifeProperties;
 
-    public AsyncConfiguration(SimlifeProperties jHipsterProperties) {
-        this.jHipsterProperties = jHipsterProperties;
+    public AsyncConfiguration(SimlifeProperties jSimlifeProperties) {
+        this.jSimlifeProperties = jSimlifeProperties;
     }
 
     @Override
@@ -32,9 +32,9 @@ public class AsyncConfiguration implements AsyncConfigurer {
     public Executor getAsyncExecutor() {
         log.debug("Creating Async Task Executor");
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(jHipsterProperties.getAsync().getCorePoolSize());
-        executor.setMaxPoolSize(jHipsterProperties.getAsync().getMaxPoolSize());
-        executor.setQueueCapacity(jHipsterProperties.getAsync().getQueueCapacity());
+        executor.setCorePoolSize(jSimlifeProperties.getAsync().getCorePoolSize());
+        executor.setMaxPoolSize(jSimlifeProperties.getAsync().getMaxPoolSize());
+        executor.setQueueCapacity(jSimlifeProperties.getAsync().getQueueCapacity());
         executor.setThreadNamePrefix("j-hipster-registry-Executor-");
         return new ExceptionHandlingAsyncTaskExecutor(executor);
     }

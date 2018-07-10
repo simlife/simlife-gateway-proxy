@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { Route } from 'app/shared';
 
 @Injectable()
-export class JhiLogfileService {
+export class SimLogfileService {
     constructor(private http: HttpClient) {}
 
     // get the Registry's logfile

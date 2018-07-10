@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs/Subscription';
 import { Log } from './log.model';
 import { LogsService } from './logs.service';
 
-import { JhiRoutesService, Route } from 'app/shared';
+import { SimRoutesService, Route } from 'app/shared';
 
 @Component({
     selector: 'sim-logs',
@@ -20,7 +20,7 @@ export class LogsComponent implements OnInit, OnDestroy {
     activeRoute: Route;
     subscription: Subscription;
 
-    constructor(private logsService: LogsService, private routesService: JhiRoutesService) {
+    constructor(private logsService: LogsService, private routesService: SimRoutesService) {
         this.filter = '';
         this.orderProp = 'name';
         this.reverse = false;

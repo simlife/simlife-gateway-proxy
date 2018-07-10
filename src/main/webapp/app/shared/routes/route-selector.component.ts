@@ -1,16 +1,16 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
-import { JhiRoutesService } from './routes.service';
+import { SimRoutesService } from './routes.service';
 import { Route } from './route.model';
 import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
-import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
+import { SimRefreshService } from 'app/shared/refresh/refresh.service';
 
 @Component({
     selector: 'sim-route-selector',
     templateUrl: './route-selector.component.html',
     styleUrls: ['route-selector.component.scss']
 })
-export class JhiRouteSelectorComponent implements OnInit, OnDestroy {
+export class SimRouteSelectorComponent implements OnInit, OnDestroy {
     activeRoute: Route;
     routes: Route[];
     savedRoutes: Route[];
@@ -21,7 +21,7 @@ export class JhiRouteSelectorComponent implements OnInit, OnDestroy {
 
     refreshReloadSubscription: Subscription;
 
-    constructor(private routesService: JhiRoutesService, private refreshService: JhiRefreshService) {}
+    constructor(private routesService: SimRoutesService, private refreshService: SimRefreshService) {}
 
     ngOnInit() {
         this.activeRoute = this.routesService.getSelectedInstance();

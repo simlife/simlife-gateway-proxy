@@ -1,20 +1,20 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { Observable } from 'rxjs/Rx';
-import { JhiRefreshService } from './refresh.service';
+import { SimRefreshService } from './refresh.service';
 
 @Component({
     selector: 'sim-refresh-selector',
     templateUrl: './refresh-selector.component.html',
     styleUrls: ['refresh-selector.component.scss']
 })
-export class JhiRefreshSelectorComponent implements OnInit, OnDestroy {
+export class SimRefreshSelectorComponent implements OnInit, OnDestroy {
     activeRefreshTime: number;
     refreshTimes: number[];
     refreshTimer: Subscription;
     refreshChangedSubscription: Subscription;
 
-    constructor(private refreshService: JhiRefreshService) {
+    constructor(private refreshService: SimRefreshService) {
         this.refreshTimes = [0, 5, 10, 30, 60, 300];
         this.activeRefreshTime = this.refreshTimes[0];
     }

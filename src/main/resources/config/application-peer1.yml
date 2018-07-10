@@ -29,7 +29,7 @@ eureka:
         hostname: eureka-peer-1
     server:
         # see discussion about enable-self-preservation:
-        # https://github.com/simlife/generator-simlife/issues/3654
+        # https://github.com/simlife/simlife-bot/issues/3654
         enable-self-preservation: false
         registry-sync-retry-wait-ms: 500
         a-sgcache-expiry-timeout-ms: 60000

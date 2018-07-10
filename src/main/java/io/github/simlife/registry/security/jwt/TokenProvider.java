@@ -37,27 +37,27 @@ public class TokenProvider {
 
     private long tokenValidityInMillisecondsForRememberMe;
 
-    private final SimlifeProperties jHipsterProperties;
+    private final SimlifeProperties jSimlifeProperties;
 
-    public TokenProvider(SimlifeProperties jHipsterProperties) {
-        this.jHipsterProperties = jHipsterProperties;
+    public TokenProvider(SimlifeProperties jSimlifeProperties) {
+        this.jSimlifeProperties = jSimlifeProperties;
     }
 
     @PostConstruct
     public void init() {
         if ("this-secret-should-not-be-used-read-the-comment"
-            .equals(jHipsterProperties.getSecurity().getAuthentication().getJwt()
+            .equals(jSimlifeProperties.getSecurity().getAuthentication().getJwt()
             .getSecret())) {
 
             log.error("WARNING! You are using the default JWT secret token, this **must** be changed in production!");
         }
-        this.secretKey = encoder.encodeToString(jHipsterProperties.getSecurity().getAuthentication().getJwt()
+        this.secretKey = encoder.encodeToString(jSimlifeProperties.getSecurity().getAuthentication().getJwt()
             .getSecret().getBytes(StandardCharsets.UTF_8));
 
         this.tokenValidityInMilliseconds =
-            1000 * jHipsterProperties.getSecurity().getAuthentication().getJwt().getTokenValidityInSeconds();
+            1000 * jSimlifeProperties.getSecurity().getAuthentication().getJwt().getTokenValidityInSeconds();
         this.tokenValidityInMillisecondsForRememberMe =
-            1000 * jHipsterProperties.getSecurity().getAuthentication().getJwt()
+            1000 * jSimlifeProperties.getSecurity().getAuthentication().getJwt()
                 .getTokenValidityInSecondsForRememberMe();
     }
 

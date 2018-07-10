@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class JhiSSHService {
+export class SimSSHService {
     constructor(private http: HttpClient) {}
 
     getSshPublicKey(): Observable<any> {

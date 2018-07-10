@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { JhiSSHService } from './ssh.service';
+import { SimSSHService } from './ssh.service';
 
 @Component({
     selector: 'sim-applications',
     templateUrl: './ssh.component.html'
 })
-export class JhiSSHComponent implements OnInit {
+export class SimSSHComponent implements OnInit {
     data: any;
     showMore: boolean;
 
-    constructor(private sshService: JhiSSHService) {
+    constructor(private sshService: SimSSHService) {
         this.showMore = true;
     }
 

@@ -37,7 +37,7 @@ import {
         UserRouteAccessService
     ]
 })
-export class JhipsterCoreModule {
+export class SimpsterCoreModule {
     constructor() {
         registerLocaleData(locale);
     }

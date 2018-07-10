@@ -6,34 +6,34 @@ import { SimlifeRegistrySharedModule } from 'app/shared';
 import {
     adminState,
     LogsComponent,
-    JhiMetricsMonitoringModalComponent,
-    JhiMetricsMonitoringComponent,
-    JhiHealthModalComponent,
-    JhiHealthCheckComponent,
-    JhiConfigurationComponent,
-    JhiDocsComponent,
-    JhiConfigurationService,
-    JhiLogfileComponent,
-    JhiHealthService,
-    JhiMetricsService,
+    SimMetricsMonitoringModalComponent,
+    SimMetricsMonitoringComponent,
+    SimHealthModalComponent,
+    SimHealthCheckComponent,
+    SimConfigurationComponent,
+    SimDocsComponent,
+    SimConfigurationService,
+    SimLogfileComponent,
+    SimHealthService,
+    SimMetricsService,
     LogsService,
-    JhiLogfileService
+    SimLogfileService
 } from './';
 
 @NgModule({
     imports: [SimlifeRegistrySharedModule, RouterModule.forChild(adminState)],
     declarations: [
         LogsComponent,
-        JhiConfigurationComponent,
-        JhiDocsComponent,
-        JhiHealthCheckComponent,
-        JhiHealthModalComponent,
-        JhiMetricsMonitoringComponent,
-        JhiMetricsMonitoringModalComponent,
-        JhiLogfileComponent
+        SimConfigurationComponent,
+        SimDocsComponent,
+        SimHealthCheckComponent,
+        SimHealthModalComponent,
+        SimMetricsMonitoringComponent,
+        SimMetricsMonitoringModalComponent,
+        SimLogfileComponent
     ],
-    entryComponents: [JhiHealthModalComponent, JhiMetricsMonitoringModalComponent],
-    providers: [JhiConfigurationService, JhiHealthService, JhiMetricsService, LogsService, JhiLogfileService],
+    entryComponents: [SimHealthModalComponent, SimMetricsMonitoringModalComponent],
+    providers: [SimConfigurationService, SimHealthService, SimMetricsService, LogsService, SimLogfileService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SimlifeRegistryAdminModule {}

@@ -44,13 +44,13 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
 
     private final Environment env;
 
-    private final SimlifeProperties jHipsterProperties;
+    private final SimlifeProperties jSimlifeProperties;
 
     private MetricRegistry metricRegistry;
 
-    public WebConfigurer(Environment env, SimlifeProperties jHipsterProperties) {
+    public WebConfigurer(Environment env, SimlifeProperties jSimlifeProperties) {
         this.env = env;
-        this.jHipsterProperties = jHipsterProperties;
+        this.jSimlifeProperties = jSimlifeProperties;
     }
 
     @Override
@@ -81,7 +81,7 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
          * See the SimlifeProperties class and your application-*.yml configuration files
          * for more information.
          */
-        if (jHipsterProperties.getHttp().getVersion().equals(SimlifeProperties.Http.Version.V_2_0) &&
+        if (jSimlifeProperties.getHttp().getVersion().equals(SimlifeProperties.Http.Version.V_2_0) &&
             server instanceof UndertowServletWebServerFactory) {
 
             ((UndertowServletWebServerFactory) server)
@@ -93,7 +93,7 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
     private void setMimeMappings(WebServerFactory server) {
         if (server instanceof UndertowServletWebServerFactory) {
             MimeMappings mappings = new MimeMappings(MimeMappings.DEFAULT);
-            // IE issue, see https://github.com/simlife/generator-simlife/pull/711
+            // IE issue, see https://github.com/simlife/simlife-bot/pull/711
             mappings.add("html", MediaType.TEXT_HTML_VALUE + ";charset=" + StandardCharsets.UTF_8.name().toLowerCase());
             // CloudFoundry issue, see https://github.com/cloudfoundry/gorouter/issues/64
             mappings.add("json", MediaType.TEXT_HTML_VALUE + ";charset=" + StandardCharsets.UTF_8.name().toLowerCase());
@@ -142,7 +142,7 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
         log.debug("Registering Caching HTTP Headers Filter");
         FilterRegistration.Dynamic cachingHttpHeadersFilter =
             servletContext.addFilter("cachingHttpHeadersFilter",
-                new CachingHttpHeadersFilter(jHipsterProperties));
+                new CachingHttpHeadersFilter(jSimlifeProperties));
 
         cachingHttpHeadersFilter.addMappingForUrlPatterns(disps, true, "/content/*");
         cachingHttpHeadersFilter.addMappingForUrlPatterns(disps, true, "/app/*");
@@ -178,7 +178,7 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
     @Bean
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        CorsConfiguration config = jHipsterProperties.getCors();
+        CorsConfiguration config = jSimlifeProperties.getCors();
         if (config.getAllowedOrigins() != null && !config.getAllowedOrigins().isEmpty()) {
             log.debug("Registering CORS filter");
             source.registerCorsConfiguration("/api/**", config);

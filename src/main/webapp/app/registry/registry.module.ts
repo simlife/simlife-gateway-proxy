@@ -4,32 +4,32 @@ import { SimlifeRegistrySharedModule } from '../shared';
 
 import {
     registryState,
-    JhiApplicationsComponent,
-    JhiConfigComponent,
-    JhiEncryptionComponent,
-    JhiHistoryComponent,
-    JhiReplicasComponent,
-    JhiSSHComponent,
-    JhiApplicationsService,
-    JhiConfigService,
-    JhiEncryptionService,
-    JhiHistoryService,
-    JhiReplicasService,
-    JhiSSHService
+    SimApplicationsComponent,
+    SimConfigComponent,
+    SimEncryptionComponent,
+    SimHistoryComponent,
+    SimReplicasComponent,
+    SimSSHComponent,
+    SimApplicationsService,
+    SimConfigService,
+    SimEncryptionService,
+    SimHistoryService,
+    SimReplicasService,
+    SimSSHService
 } from './';
 
 @NgModule({
     imports: [SimlifeRegistrySharedModule, RouterModule.forRoot(registryState, { useHash: true })],
     declarations: [
-        JhiApplicationsComponent,
-        JhiConfigComponent,
-        JhiEncryptionComponent,
-        JhiHistoryComponent,
-        JhiReplicasComponent,
-        JhiSSHComponent
+        SimApplicationsComponent,
+        SimConfigComponent,
+        SimEncryptionComponent,
+        SimHistoryComponent,
+        SimReplicasComponent,
+        SimSSHComponent
     ],
     entryComponents: [],
-    providers: [JhiApplicationsService, JhiConfigService, JhiEncryptionService, JhiHistoryService, JhiReplicasService, JhiSSHService],
+    providers: [SimApplicationsService, SimConfigService, SimEncryptionService, SimHistoryService, SimReplicasService, SimSSHService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SimlifeRegistryModule {}

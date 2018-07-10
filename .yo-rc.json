@@ -1,5 +1,5 @@
 {
-  "generator-simlife": {
+  "simlife-bot": {
     "simlifeVersion": "4.13.3",
     "baseName": "SimlifeRegistry",
     "packageName": "io.github.simlife.registry",
@@ -22,7 +22,7 @@
     "enableTranslation": false,
     "applicationType": "gateway",
     "testFrameworks": [],
-    "jhiPrefix": "jhi",
+    "simPrefix": "sim",
     "skipClient": false,
     "skipUserManagement": false,
     "clientPackageManager": "yarn",

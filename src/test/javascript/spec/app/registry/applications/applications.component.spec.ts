@@ -2,34 +2,34 @@ import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angu
 import { Observable } from 'rxjs';
 
 import { SimlifeRegistryTestModule } from '../../../test.module';
-import { JhiApplicationsComponent, JhiApplicationsService } from '../../../../../../main/webapp/app/registry';
+import { SimApplicationsComponent, SimApplicationsService } from '../../../../../../main/webapp/app/registry';
 
 describe('Component Tests', () => {
     describe('ApplicationsComponent', () => {
-        let comp: JhiApplicationsComponent;
-        let fixture: ComponentFixture<JhiApplicationsComponent>;
+        let comp: SimApplicationsComponent;
+        let fixture: ComponentFixture<SimApplicationsComponent>;
 
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
                     imports: [SimlifeRegistryTestModule],
-                    declarations: [JhiApplicationsComponent],
-                    providers: [JhiApplicationsService]
+                    declarations: [SimApplicationsComponent],
+                    providers: [SimApplicationsService]
                 })
-                    .overrideTemplate(JhiApplicationsComponent, '')
+                    .overrideTemplate(SimApplicationsComponent, '')
                     .compileComponents();
             })
         );
 
         beforeEach(() => {
-            fixture = TestBed.createComponent(JhiApplicationsComponent);
+            fixture = TestBed.createComponent(SimApplicationsComponent);
             comp = fixture.componentInstance;
         });
 
         it(
             'refresh data',
             fakeAsync(
-                inject([JhiApplicationsService], (service: JhiApplicationsService) => {
+                inject([SimApplicationsService], (service: SimApplicationsService) => {
                     const response = {
                         applications: [
                             {

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class JhiHistoryService {
+export class SimHistoryService {
     constructor(private http: HttpClient) {}
 
     findAll(): Observable<any> {
